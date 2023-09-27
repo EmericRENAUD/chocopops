@@ -80,9 +80,12 @@ function player_falling()
     var length = noGround.length;
     var element = null;
 
-    for (var i = 0; i < length; i++) {
+    for (var i = 0; i < noGround.length; i++) {
         element = noGround[i];
-
+        if (!element)
+        {
+            console.log("i=",i,"len=",length,"noGround len",noGround.length);
+        }
         var tileX = (element[0]) | 0;
         var tileY = (element[1]) | 0;
         var mtileX = (element[0] + sizeOfTileX) | 0;
